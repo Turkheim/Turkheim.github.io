@@ -8,19 +8,19 @@
       <a-scene>
        
          
-          <a-circle id="#plano-uno" visible="true" position="6 0 2" rotation="-90 0 0" radius="0.5" color="blue" ></a-circle>  
+          <a-circle id="plano-uno" visible="false" position="6 0 2" rotation="-90 0 0" radius="0.5" color="blue" ></a-circle>  
           
-          <a-circle id="#plano-dos" visible="true" position="6 0 -2" rotation="-90 0 0" radius="0.5" color="red" ></a-circle>
+          <a-circle id="plano-dos" visible="false" position="6 0 -2" rotation="-90 0 0" radius="0.5" color="red" ></a-circle>
             
-          <a-circle id="#plano-tres" visible="true" position="2 0 -3" rotation="-90 0 0" radius="0.5" color="green" ></a-circle>
+          <a-circle id="plano-tres" visible="false" position="2 0 -3" rotation="-90 0 0" radius="0.5" color="green" ></a-circle>
            
-          <a-circle id="#plano-cuatro" visible="true" position="-2 0 -2" rotation="-90 0 0" radius="0.5" color="yellow" ></a-circle>
+          <a-circle id="plano-cuatro" visible="false" position="-2 0 -2" rotation="-90 0 0" radius="0.5" color="yellow" ></a-circle>
          
-         <a-circle id="#plano-cinco" visible="true" position="-2 0 2" rotation="-90 0 0" radius="0.5" color="orange" ></a-circle>
+         <a-circle id="plano-cinco" visible="false" position="-2 0 2" rotation="-90 0 0" radius="0.5" color="orange" ></a-circle>
           
-           <a-circle id="#plano-seis" visible="true" position="2 0 3" rotation="-90 0 0" radius="0.5" color="white" ></a-circle>
+           <a-circle id="plano-seis" visible="false" position="2 0 3" rotation="-90 0 0" radius="0.5" color="white" ></a-circle>
           
-          <a-sky rotation="0 270 0" material="src:mia/office1.png"></a-sky> 
+          <a-sky rotation="0 270 0" material="src:mia/office1.jpg"></a-sky> 
        
           <a-camera position="6 0.1 2">
               <a-cursor id="cursor"></a-cursor>
@@ -29,9 +29,33 @@
               <script>
                   
               document.querySelector('#plano-dos').addEventListener('click', function (evt) {
-                document.querySelector('a-sky').setAttribute("material", "src:mia/office2.png");
-                document.querySelector('a-camera').setAttribute("position", "6 0.1 -2");
+                document.querySelector('a-sky').setAttribute("material", "src:mia/office2.jpg");
+                document.querySelector('a-camera').setAttribute("position", "6 1.7 -2");
               });
+                     document.querySelector('#plano-uno').addEventListener('click', function (evt) {
+                document.querySelector('a-sky').setAttribute("material", "src:mia/office1.jpg");
+                document.querySelector('a-camera').setAttribute("position", "6 1.7 2");
+              });
+                  
+               document.querySelector('#plano-tres').addEventListener('click', function (evt) {
+                document.querySelector('a-sky').setAttribute("material", "src:mia/office3.jpg");
+                document.querySelector('a-camera').setAttribute("position", "2 1.7 -3");
+              });
+                   document.querySelector('#plano-cuatro').addEventListener('click', function (evt) {
+                document.querySelector('a-sky').setAttribute("material", "src:mia/office4.jpg");
+                document.querySelector('a-camera').setAttribute("position", "-2 1.7 -2");
+              });
+                   document.querySelector('#plano-cinco').addEventListener('click', function (evt) {
+                document.querySelector('a-sky').setAttribute("material", "src:mia/office5.jpg");
+                document.querySelector('a-camera').setAttribute("position", "-2 1.7 2");
+              });
+                   document.querySelector('#plano-seis').addEventListener('click', function (evt) {
+                document.querySelector('a-sky').setAttribute("material", "src:mia/office6.jpg");
+                document.querySelector('a-camera').setAttribute("position", "2 1.7 3");
+              });
+              
+                  
+                  
               </script>>
   </body>
 </html>
