@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>Mi proyecto con A-Frame!</title>
+    <script src="aframe.min.js"></script>
+  </head>
+  <body>
+    <!-- El contenido va aquí -->
+      <a-scene>
+       
+         
+          <a-circle id="#plano-uno" visible="true" position="6 0 2" rotation="-90 0 0" radius="0.5" color="blue" ></a-circle>  
+          
+          <a-circle id="#plano-dos" visible="true" position="6 0 -2" rotation="-90 0 0" radius="0.5" color="red" ></a-circle>
+            
+          <a-circle id="#plano-tres" visible="true" position="2 0 -3" rotation="-90 0 0" radius="0.5" color="green" ></a-circle>
+           
+          <a-circle id="#plano-cuatro" visible="true" position="-2 0 -2" rotation="-90 0 0" radius="0.5" color="yellow" ></a-circle>
+         
+         <a-circle id="#plano-cinco" visible="true" position="-2 0 2" rotation="-90 0 0" radius="0.5" color="orange" ></a-circle>
+          
+           <a-circle id="#plano-seis" visible="true" position="2 0 3" rotation="-90 0 0" radius="0.5" color="white" ></a-circle>
+          
+          <a-sky rotation="0 270 0" material="src:mia/office1.png"></a-sky> 
+       
+          <a-camera position="6 0.1 2">
+              <a-cursor id="cursor"></a-cursor>
+          </a-camera>
+      </a-scene>
+              <script>
+                  
+              document.querySelector('#plano-dos').addEventListener('click', function (evt) {
+                document.querySelector('a-sky').setAttribute("material", "src:mia/office2.png");
+                document.querySelector('a-camera').setAttribute("position", "6 0.1 -2");
+              });
+              </script>>
+  </body>
+</html>
