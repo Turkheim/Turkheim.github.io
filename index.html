@@ -8,6 +8,8 @@
       <a-scene>
        
          
+          <a-plane id="home" visible="false" position="8 1 2.15" rotation="0 270 0" width="0.1" height="0.1" color="blue" ></a-plane>
+          
           <a-circle id="plano-uno" visible="false" position="6 0 2" rotation="-90 0 0" radius="0.5" color="blue" ></a-circle>  
           
           <a-circle id="plano-dos" visible="false" position="6 0 -2" rotation="-90 0 0" radius="0.5" color="red" ></a-circle>
@@ -54,7 +56,10 @@
                 document.querySelector('a-camera').setAttribute("position", "2 1.7 3");
               });
               
-                  
+                     document.querySelector('#home').addEventListener('click', function (evt) {
+                document.querySelector('a-sky').setAttribute("material", "src:mia/1.jpg");
+                document.querySelector('a-camera').setAttribute("position", "6 1.7 2");
+              });
                   
               </script>>
   </body>
