@@ -30,6 +30,13 @@
           <a-circle id="plano-seis" visible="false" position="2 0 3" rotation="-90 0 0" radius="0.5" color="white" sound="src: mia/click.mp3; on: click"></a-circle>
           
           <a-sky rotation="0 270 0" src="mia/office1.jpg"></a-sky> 
+          
+
+  <a-assets>
+    <a-asset-item id="tree-obj" src="mia/office.obj"></a-asset-item>
+    <a-asset-item id="tree-mtl" src="mia/office.mtl"></a-asset-item>
+  </a-assets>
+  <a-entity obj-model="obj: #tree-obj; mtl: #tree-mtl" side="double" ></a-entity>
        
           <a-camera position="6 0.1 2" sound="src: mia/sound.mp3; autoplay: true; volume: 0.3; loop: true">
            
