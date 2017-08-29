@@ -7,25 +7,39 @@
     <!-- El contenido va aquí -->
       <a-scene>
        
+    
          
-          <a-plane id="home" visible="false" position="8 1 2.15" rotation="0 270 0" width="0.1" height="0.1" color="blue" ></a-plane>
+          <a-plane id="home" visible="false" position="8 1 2.15" rotation="0 270 0" width="0.1" height="0.1" color="blue" sound="src: mia/click.mp3; on: click"></a-plane>
           
-          <a-circle id="plano-uno" visible="false" position="6 0 2" rotation="-90 0 0" radius="0.5" color="blue" ></a-circle>  
+          <a-circle id="plano-uno" visible="false" position="6 0 2" rotation="-90 0 0" radius="0.5" color="blue" sound="src: mia/click.mp3; on: click"></a-circle>  
           
-          <a-circle id="plano-dos" visible="false" position="6 0 -2" rotation="-90 0 0" radius="0.5" color="red" ></a-circle>
+          <a-circle id="plano-dos" visible="false" position="6 0 -2" rotation="-90 0 0" radius="0.5" color="red" sound="src: mia/click.mp3; on: click"></a-circle>
             
-          <a-circle id="plano-tres" visible="false" position="2 0 -3" rotation="-90 0 0" radius="0.5" color="green" ></a-circle>
+          <a-circle id="plano-tres" visible="false" position="2 0 -3" rotation="-90 0 0" radius="0.5" color="green" sound="src: mia/click.mp3; on: click"></a-circle>
            
-          <a-circle id="plano-cuatro" visible="false" position="-2 0 -2" rotation="-90 0 0" radius="0.5" color="yellow" ></a-circle>
+          <a-circle id="plano-cuatro" visible="false" position="-2 0 -2" rotation="-90 0 0" radius="0.5" color="yellow" sound="src: mia/click.mp3; on: click"></a-circle>
          
-         <a-circle id="plano-cinco" visible="false" position="-2 0 2" rotation="-90 0 0" radius="0.5" color="orange" ></a-circle>
+         <a-circle id="plano-cinco" visible="false" position="-2 0 2" rotation="-90 0 0" radius="0.5" color="orange" sound="src: mia/click.mp3; on: click"></a-circle>
           
-           <a-circle id="plano-seis" visible="false" position="2 0 3" rotation="-90 0 0" radius="0.5" color="white" ></a-circle>
+           <a-circle id="plano-seis" visible="false" position="2 0 3" rotation="-90 0 0" radius="0.5" color="white" sound="src: mia/click.mp3; on: click"></a-circle>
           
           <a-sky rotation="0 270 0" material="src:mia/office1.jpg"></a-sky> 
        
-          <a-camera position="6 0.1 2">
-              <a-cursor id="cursor"></a-cursor>
+          <a-camera position="6 0.1 2" sound="src: mia/sound.mp3; autoplay: true; volume: 0.3; loop: true">
+             
+        
+              
+              <a-entity cursor="fuse: true; fuseTimeout: 500"
+          position="0 0 -1"
+          geometry="primitive: ring"
+        scale="0.015 0.015 0.015"
+          material="color: black; shader: flat">
+  <a-animation begin="click" easing="ease-in" attribute="scale"
+               fill="backwards" from="0.001 0.001 0.001" to="0.015 0.015 0.015"></a-animation>
+  <a-animation begin="cursor-fusing" easing="ease-in" attribute="scale"
+               fill="backwards" from="0.015 0.015 0.015" to="0.001 0.001 0.001"></a-animation>
+</a-entity>
+           <!-- <a-cursor id="cursor" ></a-cursor> -->
           </a-camera>
       </a-scene>
               <script>
