@@ -31,12 +31,13 @@
           
           <a-sky rotation="0 270 0" src="mia/office1.jpg"></a-sky> 
           
+          <a-box id="coffee" visible="false" position="4.622567 1.367628 -3.09299" depth="0.3" height="0.4" width="0.3"></a-box>
 
   <a-assets>
     <a-asset-item id="tree-obj" src="mia/office.obj"></a-asset-item>
     <a-asset-item id="tree-mtl" src="mia/office.mtl"></a-asset-item>
   </a-assets>
-  <a-entity obj-model="obj: #tree-obj; mtl: #tree-mtl" side="double" position="0 -0.01 0" ></a-entity>
+  <a-entity id="model" visible="false" obj-model="obj: #tree-obj; mtl: #tree-mtl" side="double" position="0 -0.01 0" ></a-entity>
        
           <a-camera position="6 0.1 2" sound="src: mia/sound.mp3; autoplay: true; volume: 0.3; loop: true">
            
@@ -123,6 +124,11 @@
                     var entity = document.querySelector('a-camera');
                     entity.components.sound.playSound();
                   
+              });
+                  
+                   document.querySelector('#coffee').addEventListener('click', function (evt) {
+                document.querySelector('#model').setAttribute("visible", "true");
+       
               });
                   
               </script>>
