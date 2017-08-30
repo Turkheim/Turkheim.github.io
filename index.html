@@ -6,7 +6,10 @@
   <body>
     <!-- El contenido va aquí -->
       <a-scene>
-       
+         <a-assets>
+    <a-asset-item id="tree-obj" src="mia/office1.obj"></a-asset-item>
+  
+  </a-assets>
           <a-entity id="button"  position="6 0 1.3" > 
           
               <a-plane id="mute" visible="true"  rotation="-90 0 0" width="0.2" height="0.2"  material="src:mia/mute.jpg; shader: flat" sound="src: mia/click.mp3; on: click" ></a-plane>
@@ -17,27 +20,24 @@
           
           <a-plane id="home" visible="false" position="8 1 2.15" rotation="0 270 0" width="0.1" height="0.1" color="#A7DEE7" sound="src: mia/click.mp3; on: click"></a-plane>
           
-          <a-circle id="plano-uno" visible="true" position="6 0 2" rotation="-90 0 0" radius="0.5" color="#A7DEE7" sound="src: mia/click.mp3; on: click"></a-circle>  
+          <a-circle id="plano-uno" visible="false" position="6 0 2" rotation="-90 0 0" radius="0.5" color="#A7DEE7" sound="src: mia/click.mp3; on: click"></a-circle>  
           
-          <a-circle id="plano-dos" visible="true" position="6 0 -2" rotation="-90 0 0" radius="0.5" color="#A7DEE7" sound="src: mia/click.mp3; on: click"></a-circle>
+          <a-circle id="plano-dos" visible="false" position="6 0 -2" rotation="-90 0 0" radius="0.5" color="#A7DEE7" sound="src: mia/click.mp3; on: click"></a-circle>
             
-          <a-circle id="plano-tres" visible="true" position="2 0 -3" rotation="-90 0 0" radius="0.5" color="#A7DEE7" sound="src: mia/click.mp3; on: click"></a-circle>
+          <a-circle id="plano-tres" visible="false" position="2 0 -3" rotation="-90 0 0" radius="0.5" color="#A7DEE7" sound="src: mia/click.mp3; on: click"></a-circle>
            
-          <a-circle id="plano-cuatro" visible="true" position="-2 0 -2" rotation="-90 0 0" radius="0.5" color="#A7DEE7" sound="src: mia/click.mp3; on: click"></a-circle>
+          <a-circle id="plano-cuatro" visible="false" position="-2 0 -2" rotation="-90 0 0" radius="0.5" color="#A7DEE7" sound="src: mia/click.mp3; on: click"></a-circle>
          
-          <a-circle id="plano-cinco" visible="true" position="-2 0 2" rotation="-90 0 0" radius="0.5" color="#A7DEE7" sound="src: mia/click.mp3; on: click"></a-circle>
+          <a-circle id="plano-cinco" visible="false" position="-2 0 2" rotation="-90 0 0" radius="0.5" color="#A7DEE7" sound="src: mia/click.mp3; on: click"></a-circle>
           
-          <a-circle id="plano-seis" visible="true" position="2 0 3" rotation="-90 0 0" radius="0.5" color="#A7DEE7" sound="src: mia/click.mp3; on: click"></a-circle>
+          <a-circle id="plano-seis" visible="false" position="2 0 3" rotation="-90 0 0" radius="0.5" color="#A7DEE7" sound="src: mia/click.mp3; on: click"></a-circle>
           
           <a-sky rotation="0 270 0" src="mia/office1.jpg"></a-sky> 
           
-          <a-box id="coffee" visible="false" position="4.622567 1.367628 -3.09299" depth="0.3" height="0.4" width="0.3"></a-box>
+          <a-box id="coffee" visible="false" position="4.622567 1.367628 -3.09299" depth="0.3" height="0.4" width="0.3" sound="src: mia/click.mp3; on: click" ></a-box>
 
-  <a-assets>
-    <a-asset-item id="tree-obj" src="mia/office.obj"></a-asset-item>
-    <a-asset-item id="tree-mtl" src="mia/office.mtl"></a-asset-item>
-  </a-assets>
-  <a-entity id="model" visible="false" obj-model="obj: #tree-obj; mtl: #tree-mtl" side="double" position="0 -0.01 0" ></a-entity>
+
+  <a-entity id="model" visible="false" obj-model="obj: #tree-obj" material="src:mia/color3.png; shader: flat" side="double" position="0 -0.01 0" ></a-entity>
        
           <a-camera position="6 0.1 2" sound="src: mia/sound.mp3; autoplay: true; volume: 0.3; loop: true">
            
@@ -126,9 +126,15 @@
                   
               });
                   
-                   document.querySelector('#coffee').addEventListener('click', function (evt) {
+                document.querySelector('#coffee').addEventListener('click', function (evt) {
                 document.querySelector('#model').setAttribute("visible", "true");
-       
+                document.querySelector('#plano-uno').setAttribute("visible", "true")
+                document.querySelector('#plano-dos').setAttribute("visible", "true")
+                document.querySelector('#plano-tres').setAttribute("visible", "true")
+                document.querySelector('#plano-cuatro').setAttribute("visible", "true")
+                document.querySelector('#plano-cinco').setAttribute("visible", "true")
+                document.querySelector('#plano-seis').setAttribute("visible", "true")
+ 
               });
                   
               </script>>
